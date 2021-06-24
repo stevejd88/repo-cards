@@ -1,0 +1,62 @@
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 648px;
+  height: 224px;
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  margin-bottom: 15px;
+}
+
+.card .heading {
+  font-family: "DM Serif Display", serif;
+  font-size: 22px;
+  color: #081f32;
+  line-height: 25px;
+  margin: 0 0 10px 0;
+}
+
+.user {
+  font-family: " Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #a5adbb;
+  margin: 0 0 10px 0;
+}
+
+.card-info {
+  font-family: " Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #6e798c;
+  margin: 0 0 10px 0;
+}
+
+.info {
+  text-align: left;
+}
+
+.stats {
+  text-align: left;
+  font-family: " Open Sans";
+  font-size: 16px;
+}
+
+.forks,
+.stars,
+.open {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.stats span {
+  margin-right: 10px;
+}
