@@ -9,9 +9,12 @@ function App() {
   const [userName, setUserName] = useState("");
   const [githubUser, setGithubUser] = useState("");
   const [repos, setRepos] = useState({});
+  const [error, setUserError] = useState("");
 
   useEffect(() => {
-    getGitHubUser(githubUser);
+    if (githubUser !== "") {
+      getGitHubUser(githubUser);
+    }
   }, [githubUser]);
 
   const onChange = (e) => {
@@ -23,8 +26,12 @@ function App() {
     // const response = await fetch(
     //   `https://jsonplaceholder.typicode.com/${user}`
     // );
+    if (response.status === 404) {
+      setUserError("User not found");
+    }
     const data = await response.json();
     setRepos(data);
+    // console.log("fetch", data.status);
   };
 
   const onSubmit = (e) => {
@@ -38,7 +45,12 @@ function App() {
         <CardList data={repos} />
       ) : (
         <Form onSubmit={(e) => onSubmit(e)}>
-          <FormInput onChange={onChange} name='username' value={userName} />
+          <FormInput
+            onChange={onChange}
+            name='username'
+            value={userName}
+            error={error}
+          />
           <Button type='submit' label='Search User' />
         </Form>
       )}

@@ -35,11 +35,7 @@ const FormInput = ({
         disabled={disabled}
         placeholder={placeholder}
       ></input>
-      {/* {touched.address && value ? (
-        <p className='success'>Answer recorded</p>
-      ) : (
-        <p className='error'>{error.address}</p>
-      )} */}
+      {error !== "" ? <p className='error'>{error}</p> : null}
     </div>
   );
 };
