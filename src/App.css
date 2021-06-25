@@ -1,5 +1,13 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #d8d8d8;
+}
+
 .App {
   text-align: center;
-  background-color: rgb(216, 216, 216);
   height: 100vh;
 }

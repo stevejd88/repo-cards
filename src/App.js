@@ -49,6 +49,7 @@ function App() {
             onChange={onChange}
             name='username'
             value={userName}
+            placeholder=' enter a GitHub username'
             error={error}
           />
           <Button type='submit' label='Search User' />
